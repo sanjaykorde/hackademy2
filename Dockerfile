@@ -12,6 +12,7 @@ RUN pip install Flask gunicorn
 RUN pip install pandas
 RUN pip install matplotlib
 RUN pip install dash
+RUN pip install xlrd
 
 RUN pip install dash_core_components
 RUN pip install dash_bootstrap_components
