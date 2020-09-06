@@ -18,7 +18,6 @@ RUN pip install dash_bootstrap_components
 RUN pip install dash_html_components
 RUN pip install plotly
 RUN pip install matplotlib
-RUN pip install re
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
