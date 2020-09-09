@@ -8,7 +8,6 @@ WORKDIR $APP_HOME
 COPY . .
 
 # Install production dependencies.
-RUN pip install Flask gunicorn
 RUN pip install pandas
 RUN pip install matplotlib
 RUN pip install dash
@@ -19,9 +18,10 @@ RUN pip install dash_bootstrap_components
 RUN pip install dash_html_components
 RUN pip install plotly
 RUN pip install matplotlib
+RUN pip install sqlite3
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
 # For environments with multiple CPU cores, increase the number of workers
 # to be equal to the cores available.
-CMD [ "python", "./app.py" ]
+CMD [ "python", "app.py" ]
